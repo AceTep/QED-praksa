@@ -34,7 +34,6 @@ Prednosti:
 To je tehnika u području velikih jezičnih modela (LLM) koja kombinira:
 
 - Retrieval — dohvaćanje relevantnih informacija iz baze podataka, dokumenata ili vanjskih izvora (npr. vektorska baza s embeddingima)
-
 - Generation — generiranje odgovora ili teksta pomoću LLM-a koristeći te dohvaćene informacije kao dodatni kontekst
 
 

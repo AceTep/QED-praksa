@@ -15,7 +15,6 @@ def generate_chat_ollama(prompt, model="gemma3:4b"):
     response = requests.post(url, json=payload, headers=headers)
     response.raise_for_status()
 
-    # Čitaj liniju po liniju (stream)
     full_response = ""
     for line in response.iter_lines():
         if line:
@@ -27,6 +26,11 @@ def generate_chat_ollama(prompt, model="gemma3:4b"):
 
 
 if __name__ == "__main__":
-    prompt = "Napiši kratki opis Gemma 3 modela i kako se koristi u Ollami."
+    prompt = "Osmisli mi par problema koje bi mogao rijesiti uz pomoc AI-a."
     output = generate_chat_ollama(prompt)
+    
     print("Output:\n", output)
+    
+    with open("ollama_output.txt", "w", encoding="utf-8") as file:
+        file.write(output)
+    print("\nOutput has been saved to 'ollama_output.txt'")
